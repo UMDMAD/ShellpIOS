@@ -20,6 +20,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func drawerButtonTapped(sender: AnyObject) {
+        
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+        
+    }
 
 }
 
